@@ -11,7 +11,7 @@ def take_n_split(string,delimiter,pos):
 def select_minute(data,minute):
     return data.loc[data['Minutes'] == minute]
 
-data=pd.read_csv('/home/smaket/PycharmProjects/Logi i poisson/data/weblog.csv')
+data=pd.read_csv('weblog.csv')
 data=data.head(50)
 
 data['Minutes']=data['Time'].apply(lambda x: take_n_split(x,':',2))
